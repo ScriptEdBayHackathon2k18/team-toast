@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Your CSS Linked Below-->
     <link rel="stylesheet" href="/styles.css">
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <!-- jQuery Linked Below-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Your Javascript Linked Below-->
@@ -23,26 +25,21 @@
       <div class="row justify-content-center">
         <button  id="play" class="btn btn-outline-success my-2 my-sm-0">Play</button>
       </div>
-      <!--- APPEND TO FUNCTION --->
-      <div class="gambleGame">
-        <input class="yourChoice">
-        <button class="shoot">
-          SHOOT!
-        </button>
-      </div>
     </div>
     <!-- -------------------------- END OF THE SECTION -------------------------- -->
-    <nav class="navbar fixed-bottom navbar-light bg-light">
+    <nav id="option" class="navbar fixed-bottom navbar-light bg-light">
       <a class="navbar-brand" href="#">Options</a>
                                
         <!--- MOVE BUTTONS--->
         <ul class="navbar-nav mr-auto">
           <li>
-            <button id="left">LEFT</button>
-            <button id="right">RIGHT</button>
-            <button id="forward">FORWARD</button>
-            <button id="back">BACK</button>
+            <button class="move">LEFT</button>
+            <button class="move">RIGHT</button>
+            <button class="move">FORWARD</button>
+            <button class="move">BACK</button>
+            <button id="toast">TOAST</button>
             <button id="loot">LOOT</button>
+            <p>Toast-O-Meter: <span id="toastCounter"></span></p>
           </li>
       </ul>
     </nav>
