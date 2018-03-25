@@ -2,6 +2,7 @@ $('document').ready(function() {
   // JS Starts 
   // Variables  ------------------------------------------------------------------------------------------
   var toasts = 5;
+  var currentRoom;
     // Keeps track of the events: False = Hasn't happened, True = Happened 
   var event = {
     skeletonTalk:  false,
@@ -15,7 +16,7 @@ $('document').ready(function() {
   var randomRoom = Math.floor(randomness);
   // Functions being defined -----------------------------------------------------------------------------
   function selectRoom(number) {
-
+    
   }
   function beginGame() {
     $('.container').empty();
@@ -33,6 +34,7 @@ $('document').ready(function() {
   //ME JORDAN        
   function room1() {
     // TODO: make left button, add description of the room, background color, 
+    curren
     $(".container").append("<p> Looks like a modern house bedroom with a chest </p>");
     
   }
@@ -57,13 +59,20 @@ $('document').ready(function() {
     $(".container").append("<p> You see a moving rock that looks human; he's holding toasts and when he sees you he asks you if you want to gamble a toast in a game of rock paper scissors </p>");
     //EVENT HAPPENS IF CHOOSE TO GAMBLE
     //MOVING ROCK DAT LOOK HUMAN CHOICE
-    var allChoices = ["rock",
+    
+    var allChoices = [
+        "rock",
         "paper",
         "scissors"
         ];
-    var rockChoice = Math.floor(Math.random()*3);
-  }
-  
+    $("#3").click(function() {
+      var heroChoice = $(".yourChoice").val();
+      $(".container").append("you chose " + heroChoice);
+      var choiceRoll = Math.floor(Math.random()*3);
+      var rockChoice = allChoices[choiceRoll];
+      $(".container").append("the rock chose " + rockChoice);
+    });
+  }           
                     
   // WEI
   // Skeleton !
@@ -122,4 +131,5 @@ $('document').ready(function() {
   $("#play").click(function(){
     beginGame();
   });
+  $("#loot").click(loot());
 });
