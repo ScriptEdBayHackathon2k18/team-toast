@@ -77,9 +77,9 @@ $('document').ready(function() {
       var rockChoice = allChoices[choiceRoll];
       $(".container").append("the rock chose " + rockChoice);
       //CONDITIONAL TIES
-        if(yourChoice === "rock" && computerChoice === "rock") {
+        if(yourChoice === "rock" && rockChoice === "rock") {
                 $("#judgementChoiceDisplay").text("Nobody!");
-        } else if (yourChoice === "paper" && computerChoice === "paper"){
+        } else if (yourChoice === "paper" && rockChoice === "paper"){
                 $("#judgementChoiceDisplay").text("Nobody!");
         } else if (yourChoice === "scissors" && rockChoice === "scissors"){
                 $("#judgementChoiceDisplay").text("Nobody!");
