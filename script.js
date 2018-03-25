@@ -10,10 +10,16 @@ $('document').ready(function() {
     popBalloon: false,
   }
   // Your inventory
-  var collectibles = [];
-  var rooms = [room1, room2, room3, room4, room5, room6, room7, room8, room9, room10, room11, room12, room13, room14, room15]
+  var inventory = [];
+  
+  var rooms = [room1, room2, room3, room4, room5, room6, room7, room8, room9, room10, room11, room12, room13, room14, room15];
+  
   var randomness = Math.random() * rooms.length;
   var randomRoom = Math.floor(randomness);
+  
+  var loot = {
+    1: "Super Toast",
+  }
   // Functions being defined -----------------------------------------------------------------------------
   function selectRoom(number) {
     
@@ -26,9 +32,11 @@ $('document').ready(function() {
   }
    
   function loot(roomNumber) {
-    if (roomNumber === 1 ) {
+    if (roomNumber === 1 && inventory.indexOf("Super Toast") === -1) {
       $(".container").append("<p>You force the chest with raw physical strength, you found super-toast!</p>");
-      collectibles.push("Super Toast");
+      inventory.push("Super Toast");
+    } else {
+      alert("There isn't anything to loot");
     }
   }
   
@@ -81,25 +89,25 @@ $('document').ready(function() {
       $(".container").append("the rock chose " + rockChoice);
       //CONDITIONAL TIES
         if(yourChoice === "rock" && rockChoice === "rock") {
-                $("#judgementChoiceDisplay").text("Nobody!");
+                $("#judgementChoiceDisplay").append("Nobody Again!");
         } else if (yourChoice === "paper" && rockChoice === "paper") { 
-                $("#judgementChoiceDisplay").text("Nobody!");
+                $("#judgementChoiceDisplay").text("Nobody Again!");
         } else if (yourChoice === "scissors" && rockChoice === "scissors") {
-                $("#judgementChoiceDisplay").text("Nobody!");
+                $("#judgementChoiceDisplay").text("Nobody Again!");
 //CONDITIONAL HERO WINS
         } else if (yourChoice === "rock" && rockChoice === "scissors") {
-                $("#judgementChoiceDisplay").text("HERO WINS!");
+                $("#judgementChoiceDisplay").text("YOU WIN TAKE YOUR TOAST!");
         } else if (yourChoice === "paper" && rockChoice === "rock") {
-                $("#judgementChoiceDisplay").text("HERO WINS!");
+                $("#judgementChoiceDisplay").text("YOU WIN TAKE YOUR TOAST!");
         } else if (yourChoice === "scissors" && rockChoice === "paper") {
-                $("#judgementChoiceDisplay").text("HERO WINS!");
+                $("#judgementChoiceDisplay").text("YOU WIN TAKE YOUR TOAST!");
 //CONDITIONAL COMPUTER WINS
         } else if (yourChoice === "rock" && rockChoice === "paper") {
-                $("#judgementChoiceDisplay").text("COMPUTER WINS!");
+                $("#judgementChoiceDisplay").text("You Lost Give The Rock Toast!");
         } else if (yourChoice === "paper" && rockChoice === "scissors") {
-                $("#judgementChoiceDisplay").text("COMPUTER WINS!");
+                $("#judgementChoiceDisplay").text("You Lost Give The Rock Toast!");
         } else if (yourChoice === "scissors" && rockChoice === "rock") {
-                $("#judgementChoiceDisplay").text("COKMPUTER WINS!");
+                $("#judgementChoiceDisplay").text("You Lost Give The Rock Toast!");
         }
     });
   }         
@@ -171,4 +179,17 @@ $('document').ready(function() {
     beginGame();
   });
   $("#loot").click(loot(currentRoom)); 
+  
+  $("#left").click(function(){
+    
+  });
+  $("#right").click(function(){
+    
+  });
+  $("#forward").click(function(){
+    
+  });
+  $("#back").click(function(){
+    
+  });
 });
