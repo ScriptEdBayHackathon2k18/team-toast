@@ -1,51 +1,69 @@
 $('document').ready(function() {
-  // JS Starts here
-  // Functions being defined
+  // JS Starts 
+  // Variables  ------------------------------------------------------------------------------------------
+  var toasts = 5;
+    // Keeps track of the events: False = Hasn't happened, True = Happened 
+  var event = {
+    skeletonTalk:  false,
+    skeletonGiveToast: false,
+    popBalloon: false,
+  }
+  // Your inventory
+  var collectibles = [];
+    
+  var randomness = Math.random() * 15;
+  var randomRoom = Math.floor(randomness);
+  // Functions being defined -----------------------------------------------------------------------------
   function selectRoom(number) {
 
   }
   function beginGame() {
     $('.container').empty();
     $('.container').append("<p>Your journey in The Maze begins ...</p>");
-    var toasts = 5;
-    // Keeps track of the events: False = Hasn't happened, True = Happened 
-    var event = {
-      skeletonTalk:  false,
-      skeletonGiveToast: false,
-      popBalloon: false,
-    }
-    // Your inventory
-    var collectibles = [];
-    
-    var randomness = Math.random() * 15;
-    var randomRoom = Math.floor(randomness);
     console.log(randomRoom);
     rooms[randomRoom]();
   }
    
   var rooms = [room1, room2, room3, room4, room5, room6, room7, room8, room9, room10, room11, room12, room13, room14, room15];
   
+  function loot() {
+    
+  }
   
   //ME JORDAN        
   function room1() {
     // TODO: make left button, add description of the room, background color, 
     $(".container").append("<p> Looks like a modern house bedroom with a chest </p>");
+    
   }
   function room2() {
     $(".container").append("<p> Looks lika swamp and has live larva crawling in the floor </p>");
     var chance = Math.random();
-    if (chance )
+    if (chance > 0.5) {
+      $(".container").append("<p> Disgusting! A toast has rotted away! </p>");
+      toasts -= 1;
+    } else {
+      $(".container").append("<p> Being aware, you manage to keep your toasts safe. </p>");
+    }
   }
   function room3() {
     $(".container").append("<p> Smells like poop but like the room is very dark and you can't see anything (you didn't bring a flshlight) </p>");
+    
   }
   function room4() {
     $(".container").append("<p> Looks bright and you see something that looks lika rock with face and blink red eye but open mouth with shape of toast maybe it hungury </p>");
   }
   function room5() {
-    $(".container").append("<p> You see a moving rock that looks human hes holding toast and when he sees you he asks you if you want to gamble a toast in a game of </p>");
+    $(".container").append("<p> You see a moving rock that looks human; he's holding toasts and when he sees you he asks you if you want to gamble a toast in a game of rock paper scissors </p>");
+    //EVENT HAPPENS IF CHOOSE TO GAMBLE
+    //MOVING ROCK DAT LOOK HUMAN CHOICE
+    var allChoices = ["rock",
+        "paper",
+        "scissors"
+        ];
+    var rockChoice = Math.floor(Math.random()*3);
   }
-                    
+  
                     
   // WEI
   // Skeleton !
