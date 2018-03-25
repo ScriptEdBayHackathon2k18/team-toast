@@ -8,11 +8,21 @@ $('document').ready(function() {
     $('.container').empty();
     $('.container').append("<p>Your journey in The Maze begins ...</p>");
     var toasts = 5;
-    var unlocked = {
-    
+    // Keeps track of the events: False = Hasn't happened, True = Happened 
+    var event = {
+      skeletonTalk:  false,
+      skeletonGiveToast: false,
+      popBalloon: false,
     }
-    math.random.floor(x 15)
-    rooms[0]();
+    // Your inventory
+    var collectibles = {
+      
+    }
+    
+    var randomness = Math.random() * 15
+    var randomRoom = Math.floor(randomness);
+    console.log(randomRoom);
+    rooms[randomRoom]();
   }
    
   var rooms = [room1, room2, room3, room4, room5, room6, room7, room8, room9, room10, room11, room12, room13, room14, room15];
@@ -27,10 +37,10 @@ $('document').ready(function() {
     $(".container").append("<p> Looks lika swamp and has live larva crawling in the floor </p>");
   }
   function room3() {
-    $(".container").append("<p> Looks lika modern house bedroom witha chest </p>");
+    $(".container").append("<p> Smells like poop but like the room is very dark and you cant see anything (you didnt bring a flshlight) </p>");
   }
   function room4() {
-    $(".container").append("<p> Looks lika modern house bedroom witha chest </p>");
+    $(".container").append("<p> Looks lika rock with face and blink red eye but open mouth with shaoe of toa </p>");
   }
   function room5() {
     $(".container").append("<p> Looks lika modern house bedroom witha chest </p>");
@@ -67,16 +77,16 @@ $('document').ready(function() {
 //Alizah
   //have springs, as in water.
   function room11() {
-    $(".container").append("<p> Now this room has a water fall to go through </p>");
+    $(".container").append("<p> Now this room has a waterfall to gaze at</p>");
  
   }
   //balloon, pop it and have powerup?
   function room12() {
-    $(".container").append("<p> There is a balloon, see what's in it to help you </p>");
+    $(".container").append("<p> There is a balloon, pop it, see what's in it to help you </p>");
   }
   //have fire??
   function room13() {
-    $(".container").append("<p> Nothing here for you to get besides a fire right there </p>");
+    $(".container").append("<p> Nothing here for you to get besides a nice fire </p>");
 
   }
   //toast a one of the breads w/ sun??
