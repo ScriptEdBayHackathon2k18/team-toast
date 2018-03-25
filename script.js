@@ -1,12 +1,21 @@
 $('document').ready(function() {
   // JS Starts here
-  function room1() {
+  // Functions being defined
+  function selectRoom(number) {
 
   }
+  function beginGame() {
+    $('.container').empty();
+    $('.container').append("<p>Sample Room</p>");
+  }
                     
-  //ME              
-  function room2() {
+  //ME JORDAN        
+  function room1() {
+    // TODO: make left button, add description of the room, background color, 
     
+  }
+  function room2() {
+
   }
   function room3() {
 
@@ -17,49 +26,47 @@ $('document').ready(function() {
   function room5() {
 
   }
-  function room6() {
-
-  }
                     
                     
   // WEI                 
-  function room#() {
+  function room6() {
+    $()
+  }
+  function room7() {
 
   }
-  function room#() {
+  function room8() {
 
   }
-  function room#() {
+  function room9() {
 
   }
-  function room#() {
-
-  }
-  function room#() {
+  function room10() {
 
   }
                     
-// Alizah
-  //  have hf hsprings
+//Alizah
+  //have springs?? room will provide a 
   function room11() {
 
   }
-  //  
+  //balloons??
   function room12() {
 
   }
-  //
+  //have fire??
   function room13() {
 
   }
-  //
+  //toast a one of the breads w/ sun??
   function room14() {
 
   }
-  //
+  //choose between p
   function room15() {
 
   }
                   
-  
+  //Function being called 
+  $("#play").click(function());
 });
