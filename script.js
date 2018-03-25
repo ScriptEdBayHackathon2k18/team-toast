@@ -7,6 +7,10 @@ $('document').ready(function() {
   function beginGame() {
     $('.container').empty();
     $('.container').append("<p>Sample Room</p>");
+    var toasts = 5;
+    var unlocked = {
+    
+    }
   }
                     
   //ME JORDAN        
@@ -46,11 +50,12 @@ $('document').ready(function() {
   }
                     
 //Alizah
-  //have springs?? room will provide a 
+  //have springs, as in water.
   function room11() {
+    
 
   }
-  //balloons??
+  //balloon, pop it and have powerup?
   function room12() {
 
   }
@@ -62,11 +67,13 @@ $('document').ready(function() {
   function room14() {
 
   }
-  //choose between p
+  //choose between pan or something
   function room15() {
 
   }
                   
   //Function being called 
-  $("#play").click(function());
+  $("#play").click(function(){
+    beginGame();
+  });
 });
