@@ -39,6 +39,7 @@ $('document').ready(function() {
     $(".container").append("<p> Looks like a modern house bedroom with a chest </p>");
     
   }
+  
   function room2() {
     currentRoom = 2;
     $(".container").append("<p> Looks lika swamp and has live larva crawling in the floor </p>");
@@ -50,11 +51,13 @@ $('document').ready(function() {
       $(".container").append("<p> Being aware, you manage to keep your toasts safe. </p>");
     }
   }
+  
   function room3() {
     currentRoom = 3;
     $(".container").append("<p> Smells like poop but like the room is very dark and you can't see anything (you didn't bring a flshlight) </p>");
     
   }
+  
   function room4() {
     currentRoom = 4;
     $(".container").append("<p> Looks bright and you see something that looks lika rock with face and blink red eye but open mouth with shape of toast maybe it hungury </p>");
@@ -72,36 +75,34 @@ $('document').ready(function() {
         ];
     $(".shoot").click(function() {
       var yourChoice = $(".yourChoice").val();
-      $(".container").append("you chose " + heroChoice);
+      $(".container").append("you chose " + yourChoice);
       var choiceRoll = Math.floor(Math.random()*3);
       var rockChoice = allChoices[choiceRoll];
       $(".container").append("the rock chose " + rockChoice);
       //CONDITIONAL TIES
         if(yourChoice === "rock" && rockChoice === "rock") {
                 $("#judgementChoiceDisplay").text("Nobody!");
-        } else if (yourChoice === "paper" && rockChoice === "paper"){
+        } else if (yourChoice === "paper" && rockChoice === "paper") { 
                 $("#judgementChoiceDisplay").text("Nobody!");
-        } else if (yourChoice === "scissors" && rockChoice === "scissors"){
+        } else if (yourChoice === "scissors" && rockChoice === "scissors") {
                 $("#judgementChoiceDisplay").text("Nobody!");
 //CONDITIONAL HERO WINS
-        } else if (yourChoice === "rock" && rockChoice === "scissors"){
+        } else if (yourChoice === "rock" && rockChoice === "scissors") {
                 $("#judgementChoiceDisplay").text("HERO WINS!");
-        } else if (yourChoice === "paper" && rockChoice === "rock"){
+        } else if (yourChoice === "paper" && rockChoice === "rock") {
                 $("#judgementChoiceDisplay").text("HERO WINS!");
-        } else if (yourChoice === "scissors" && rockChoice === "paper"){
+        } else if (yourChoice === "scissors" && rockChoice === "paper") {
                 $("#judgementChoiceDisplay").text("HERO WINS!");
 //CONDITIONAL COMPUTER WINS
-        } else if (yourChoice === "rock" && rockChoice === "paper"){
+        } else if (yourChoice === "rock" && rockChoice === "paper") {
                 $("#judgementChoiceDisplay").text("COMPUTER WINS!");
-        } else if (yourChoice === "paper" && rockChoice === "scissors"){
+        } else if (yourChoice === "paper" && rockChoice === "scissors") {
                 $("#judgementChoiceDisplay").text("COMPUTER WINS!");
-        } else if (yourChoice === "scissors" && rockChoice === "rock"){
+        } else if (yourChoice === "scissors" && rockChoice === "rock") {
                 $("#judgementChoiceDisplay").text("COKMPUTER WINS!");
         }
     });
-  };
-});
-            
+  }         
   // WEI
   // Skeleton !
   function room6() {
@@ -168,14 +169,6 @@ $('document').ready(function() {
   //Function being called 
   $("#play").click(function(){
     beginGame();
-});
-  $("#loot").click(loot(currentRoom));
-});
-  $("#left").click(function(){
-});
-  $("#right").click(function(){
-});
-  $("#forward").click(function(){
-});
-  $("#back").click(function(){
+  });
+  $("#loot").click(loot(currentRoom)); 
 });
