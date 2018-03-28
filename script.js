@@ -11,7 +11,9 @@ $('document').ready(function() {
 
   var loot = {
     1: "Super Toast",
-    3: "Carbon Steel",
+    3: "ScriptED swag",
+    7: "Orange Juice",
+    11: "Cinnamon Butter",
     14: "Mystic Pan"
   }
   // Functions being defined -----------------------------------------------------------------------------
@@ -159,6 +161,7 @@ $('document').ready(function() {
         } else {
           $(".whoWon").text("You didn't play");
         }
+        $('#toastCounter').html(toasts);
     });
   } // Completed   
   // WEI
@@ -225,7 +228,7 @@ $('document').ready(function() {
     currentRoom = 13;
     $(".container").append("<p> Look at the sun, toast up! </p>");
     $(".container").css("background-color", "#FF6347");
-    $(".container").append("<img class='img-thumbnail' src=https://c1.staticflickr.com/7/6221/6331554008_6f7db35ecf_b.jpg>");
+    $(".container").append('<img class="img-thumbnail" src="https://c1.staticflickr.com/7/6221/6331554008_6f7db35ecf_b.jpg">');
 
   }
   //choose between pan or something
